@@ -1,0 +1,144 @@
+    /* --- Global & Body Styles --- */
+body.dark-theme {
+    background-color: #0d0d1a; /* Very dark background to blend with the image */
+    font-family: 'Montserrat', sans-serif; /* Modern font */
+    color: #e0e0e0; /* Light grey for general text */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    justify-content: center; /* Center the banner vertically */
+}
+
+.hero-banner {
+    width: 90%;
+    max-width: 1000px;
+    height: 500px; /* Increased height to give more space for the background */
+    border-radius: 15px; /* Slightly more rounded corners */
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    /* --- Background Image Styling --- */
+    background-image: url('bg.jpg'); /* YOUR IMAGE WILL GO HERE */
+    background-size: cover; /* Cover the entire area */
+    background-position: center bottom; /* Adjust to show the arc better */
+    background-repeat: no-repeat;
+    
+    /* Optional: A subtle dark overlay to ensure text readability on brighter parts of the image */
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3); 
+    
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
+}
+
+/* --- Header Styling --- */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    position: relative;
+    z-index: 2; /* Ensure header is above content overlay */
+}
+
+.logo {
+    font-weight: 700; /* Bold */
+    font-size: 1.3em;
+    color: #ffffff; /* White logo */
+    letter-spacing: 1px;
+}
+
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.header-nav li {
+    margin-left: 30px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #b0b0b0; /* Lighter grey for links */
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* --- Main Content Styling --- */
+.content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    color: #ffffff; /* White for main content text */
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: 4em; /* Larger heading */
+    font-weight: 700; 
+    letter-spacing: 8px; /* More prominent letter spacing */
+    margin: 0 0 15px 0;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.7); /* Subtle glow effect */
+}
+
+.content .subtitle {
+    font-size: 1em;
+    margin-bottom: 30px;
+    color: #d0d0d0; /* Slightly off-white for subtitle */
+    line-height: 1.6;
+}
+
+.cta-button {
+    background: linear-gradient(90deg, #8a2be2 0%, #4682b4 100%); /* Purple to blue gradient */
+    border: none;
+    padding: 15px 40px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 50px; /* Pill shape */
+    box-shadow: 0 0 15px rgba(138, 43, 226, 0.6); /* Matching glow */
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(138, 43, 226, 0.8), 0 0 5px rgba(138, 43, 226, 0.4);
+    background: linear-gradient(90deg, #9932cc 0%, #5a9bd4 100%); /* Slightly brighter hover gradient */
+}
+
+/* --- Footer Text Styling --- */
+.footer-text {
+    position: absolute;
+    bottom: 30px;
+    font-size: 0.75em;
+    color: #888; /* Darker grey for less emphasis */
+    z-index: 2;
+}
+
+.footer-text.left {
+    left: 30px;
+    font-weight: normal; /* Less bold than before */
+    letter-spacing: 0.5px;
+}
+
+.footer-text.right {
+    right: 30px;
+    text-align: right;
+    line-height: 1.5;
+}
